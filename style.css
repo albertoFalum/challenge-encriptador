@@ -96,7 +96,6 @@ main {
     cursor: pointer;
 }
 
-
 .btn-encriptar:hover,
 .btn-desencriptar:hover,
 .btn-copiar:hover {
@@ -112,7 +111,6 @@ footer {
     font-weight: bold;
     font-size: 20px;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
     margin-top: 10px
@@ -121,7 +119,6 @@ footer {
 @media (max-width: 768px) {
     main {
         flex-direction: column;
-        /* Cambia a una columna en pantallas más pequeñas */
         align-items: left;
     }
 
@@ -138,5 +135,5 @@ footer {
     .btn-desencriptar,
     .btn-copiar {
         width: 40%;
-    }
+    } 
 }

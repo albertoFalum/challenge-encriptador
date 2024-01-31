@@ -3,7 +3,7 @@ let vocales = ['a', 'e', 'i', 'o', 'u'];
 
 
 function validarTexto(texto) {
-    if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
+    if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) || texto.trim() === "") {
         document.getElementById('textoInput').value = "";
         //document.getElementById('textoResultado').value = 'Solo puede ingresar letras minúsculas y sin caracteres especiales';
         alert('Solo puede ingresar letras minúsculas y sin caracteres especiales');
@@ -43,6 +43,7 @@ function codificarTexto() {
                     break;
             }
         }
+        alert("Texto encriptado con éxito");
         document.getElementById('textoResultado').value = textoEncriptado;
     }
 }
@@ -61,22 +62,27 @@ function decodificarTexto() {
                 textoOriginal = textoOriginal.replace(new RegExp(llave, 'g'), vocales[i]);
             }
         }
-
+        alert("Texto desencriptado con éxito");
         document.getElementById('textoResultado').value = textoOriginal;
-
+        
     }
 
 }
 
 function copiarTexto() {
-   
     let textoACopiar = document.getElementById("textoResultado");
-    document.getElementById('textoInput').value="";
+
+    if (textoACopiar.value.trim() === "") {
+        alert('No hay nada para copiar');
+        return;
+    }
+
+    document.getElementById('textoInput').value = "";
     textoACopiar.select();
 
     try {
         navigator.clipboard.writeText(textoACopiar.value);
-        document.getElementById("textoResultado").value="";
+        document.getElementById("textoResultado").value = "";
     } catch (err) {
         console.error('No se pudo copiar al portapapeles:', err);
     } finally {
