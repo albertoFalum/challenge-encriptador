@@ -86,7 +86,7 @@ main {
 .btn-copiar {
     width: 30%;
     padding: 15px 0;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     color:white;
     background: #0A3871;
@@ -126,7 +126,8 @@ footer {
 
     .contenedor-cajaTexto,
     .contenedor-cajaResultado {
-        width: 100%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
+        width: 90%; 
+        height: 50%;
     }
 
 }
