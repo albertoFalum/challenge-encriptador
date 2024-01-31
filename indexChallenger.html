@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/Logo.png" alt="Logo Alura">
+        <h1 class="titulo-aplicacion">ENCRIPTADOR VERSION 1.0</h1>
+    </header>
+
+    <main>
+        <div class="contenedor-cajaTexto">
+            <textarea id="textoInput" placeholder="Ingrese el texto a encriptar o desencriptar"></textarea>
+            <p class="parrafo">&#9888; Ingrese minusculas solamente</p>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="codificarTexto()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="decodificarTexto()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="contenedor-cajaResultado">
+            <textarea id="textoResultado" placeholder="NINGUN MENSAJE FUE ENCONTRADO" readonly></textarea>
+            <div class="botones">
+                <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; Alberto Francisco Alum - 2024</p>
+    </footer>
+
+    <script src="aplicacion.js"></script>
+</body>
+
+</html>
