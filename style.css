@@ -65,11 +65,11 @@ main {
     outline: none;
 }
 
-.contenedor-cajaTexto textarea::placeholder{
+.contenedor-cajaTexto textarea::placeholder {
     color: #0A3871;
 }
 
-.contenedor-cajaResultado textarea::placeholder{
+.contenedor-cajaResultado textarea::placeholder {
     color: #0A3871;
     font-weight: 200;
 }
@@ -81,19 +81,19 @@ main {
     text-align: center;
 }
 
-.btn-encriptar, 
+.btn-encriptar,
 .btn-desencriptar,
 .btn-copiar {
     width: 30%;
     padding: 15px 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    color:white;
+    color: white;
     background: #0A3871;
-    border:none;
+    border: none;
     border-radius: 25px;
     transition: 1s all;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -120,14 +120,32 @@ footer {
 
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Cambia a una columna en pantallas más pequeñas */
+        flex-direction: column;
+        /* Cambia a una columna en pantallas más pequeñas */
         align-items: left;
+    }
+
+    body {
+        align-items: center;
     }
 
     .contenedor-cajaTexto,
     .contenedor-cajaResultado {
-        width: 90%; 
-        height: 50%;
+        width: 90%;
     }
 
+    .btn-encriptar,
+    .btn-desencriptar,
+    .btn-copiar {
+        width: 30%;
+        padding: 15px 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: #0A3871;
+        border: none;
+        border-radius: 25px;
+        transition: 1s all;
+        cursor: pointer;
+    }
 }
