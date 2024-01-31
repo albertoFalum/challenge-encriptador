@@ -40,7 +40,7 @@ main {
 
 .contenedor-cajaTexto .parrafo {
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 14px;
     color: red;
 }
 
@@ -71,7 +71,7 @@ main {
 
 .contenedor-cajaResultado textarea::placeholder {
     color: #0A3871;
-    font-weight: 200;
+    font-weight: bold;
 }
 
 .botones {
@@ -100,7 +100,7 @@ main {
 .btn-encriptar:hover,
 .btn-desencriptar:hover,
 .btn-copiar:hover {
-    background: black;
+    background: purple;
     transform: scale(1.2);
 }
 
