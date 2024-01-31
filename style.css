@@ -86,7 +86,7 @@ main {
 .btn-copiar {
     width: 30%;
     padding: 15px 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
     background: #0A3871;
@@ -137,15 +137,6 @@ footer {
     .btn-encriptar,
     .btn-desencriptar,
     .btn-copiar {
-        width: 30%;
-        padding: 15px 0;
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-        background: #0A3871;
-        border: none;
-        border-radius: 25px;
-        transition: 1s all;
-        cursor: pointer;
+        width: 40%;
     }
 }
