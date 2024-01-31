@@ -75,7 +75,6 @@ main {
 }
 
 .botones {
-    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
@@ -119,3 +118,14 @@ footer {
     margin-top: 10px
 }
 
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambia a una columna en pantallas más pequeñas */
+        align-items: center;
+    }
+
+    .contenedor-cajaTexto,
+    .contenedor-cajaResultado {
+        width: 90%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
+    }
+}
