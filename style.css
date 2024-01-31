@@ -32,7 +32,7 @@ main {
 .contenedor-cajaTexto,
 .contenedor-cajaResultado {
     width: 45%;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     text-align: center;
 }
@@ -86,7 +86,7 @@ main {
 .btn-copiar {
     width: 30%;
     padding: 15px 0;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color:white;
     background: #0A3871;
@@ -121,11 +121,12 @@ footer {
 @media (max-width: 768px) {
     main {
         flex-direction: column; /* Cambia a una columna en pantallas más pequeñas */
-        align-items: center;
+        align-items: left;
     }
 
     .contenedor-cajaTexto,
     .contenedor-cajaResultado {
-        width: 90%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
+        width: 100%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
     }
+
 }
