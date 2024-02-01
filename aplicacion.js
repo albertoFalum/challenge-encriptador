@@ -53,7 +53,7 @@ function codificarTexto() {
                     break;
             }
         }
-        alert("Texto encriptado con éxito");
+        /*alert("Texto encriptado con éxito");*/
         document.getElementById('textoResultado').value = textoEncriptado;
     }
 }
@@ -72,7 +72,7 @@ function decodificarTexto() {
                 textoOriginal = textoOriginal.replace(new RegExp(llave, 'g'), vocales[i]);
             }
         }
-        alert("Texto desencriptado con éxito");
+        /*alert("Texto desencriptado con éxito");*/
         document.getElementById('textoResultado').value = textoOriginal;
         
     }
