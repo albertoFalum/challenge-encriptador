@@ -3,11 +3,14 @@ let vocales = ['a', 'e', 'i', 'o', 'u'];
 
 
 function validarTexto(texto) {
-
-    if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) || texto.trim() === "") {
+    if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
+        if (texto.trim() === "") {
+            alert("Debe ingresar un texto");
+        } else {
+            alert('No se pueden ingresar letras mayúsculas ni caracteres especiales');
+        }
         document.getElementById('textoInput').value = "";
-        document.getElementById('textoResultado').value="";
-        alert('Solo puede ingresar letras minúsculas y sin caracteres especiales');
+        document.getElementById('textoResultado').value = "";
         return false;
     }
     return true;
