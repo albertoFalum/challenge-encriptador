@@ -3,9 +3,10 @@ let vocales = ['a', 'e', 'i', 'o', 'u'];
 
 
 function validarTexto(texto) {
+
     if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) || texto.trim() === "") {
         document.getElementById('textoInput').value = "";
-        //document.getElementById('textoResultado').value = 'Solo puede ingresar letras minúsculas y sin caracteres especiales';
+        document.getElementById('textoResultado').value="";
         alert('Solo puede ingresar letras minúsculas y sin caracteres especiales');
         return false;
     }
