@@ -1,6 +1,10 @@
 let llavesDesencriptar = ["ai", "enter", "imes", "ober", "ufat"];
 let vocales = ['a', 'e', 'i', 'o', 'u'];
 
+function limpiarTextAreas(){
+    document.getElementById('textoInput').value = "";
+    document.getElementById('textoResultado').value = "";
+}
 
 function validarTexto(texto) {
     if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
@@ -9,8 +13,7 @@ function validarTexto(texto) {
         } else {
             alert('No se pueden ingresar letras mayúsculas ni caracteres especiales');
         }
-        document.getElementById('textoInput').value = "";
-        document.getElementById('textoResultado').value = "";
+        limpiarTextAreas()
         return false;
     }
     return true;
@@ -81,15 +84,14 @@ function copiarTexto() {
         return;
     }
 
-    document.getElementById('textoInput').value = "";
     textoACopiar.select();
 
     try {
-        navigator.clipboard.writeText(textoACopiar.value);
-        document.getElementById("textoResultado").value = "";
+        document.execCommand('copy');
+        alert('Texto copiado');
+        limpiarTextAreas()
     } catch (err) {
         console.error('No se pudo copiar al portapapeles:', err);
-    } finally {
-        window.getSelection().removeAllRanges();
     }
 }
+
