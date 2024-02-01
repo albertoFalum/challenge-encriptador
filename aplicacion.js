@@ -7,15 +7,18 @@ function limpiarTextAreas(){
 }
 
 function validarTexto(texto) {
-    if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
-        if (texto.trim() === "") {
-            alert("Debe ingresar un texto");
-        } else {
-            alert('No se pueden ingresar letras mayúsculas ni caracteres especiales');
-        }
-        limpiarTextAreas()
+    if (texto.trim() === "") {
+        alert("Debe ingresar un texto");
+        limpiarTextAreas();
         return false;
     }
+
+    if (/[^a-z\u0061-\u007A\s]/.test(texto.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
+        alert('No se pueden ingresar letras mayúsculas ni caracteres especiales');
+        limpiarTextAreas();
+        return false;
+    }
+
     return true;
 }
 
@@ -80,7 +83,7 @@ function copiarTexto() {
     let textoACopiar = document.getElementById("textoResultado");
 
     if (textoACopiar.value.trim() === "") {
-        alert('No hay nada para copiar');
+        alert('No hay texto para copiar');
         return;
     }
 
